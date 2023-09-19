@@ -1,5 +1,22 @@
-/* Database schema to keep the structure of entire database. */
+/* Updated Scheme v1 */
+/* 
+    Requeriment:
+    Create a table named animals with the following columns:
+        id: integer
+        name: string
+        date_of_birth: date
+        escape_attempts: integer
+        neutered: boolean
+        weight_kg: decimal
+ */
+
+CREATE DATABASE vet_clinic;
 
 CREATE TABLE animals (
-    name varchar(100)
+    id serial primary key,
+    name varchar(100) not null,
+    date_of_birth date not null,
+    escape_attempts integer not null,
+    neutered boolean not null,
+    weight_kg decimal not null
 );
