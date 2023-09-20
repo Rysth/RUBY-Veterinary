@@ -26,3 +26,28 @@ CREATE TABLE animals (
 
 ALTER TABLE animals
 ADD COLUMN species VARCHAR(100);
+
+
+/* CREATE NEW TABLES - (OWNERS & SPECIES) */
+
+CREATE TABLE owners (
+    id serial primary key,
+    full_name varchar(100) not null,
+    age integer not null
+);
+
+CREATE TABLE species (
+    id serial primary key,
+    name varchar(100) not null
+);
+
+ALTER TABLE animals
+DROP COLUMN species;
+
+ALTER TABLE animals
+ADD COLUMN species_id integer REFERENCES species(id);
+
+ALTER TABLE animals
+ADD COLUMN owners_id integer REFERENCES owners(id);
+
+
