@@ -62,12 +62,12 @@ CREATE TABLE vets (
 CREATE TABLE specializations (
     id serial primary key,
     vet_id int REFERENCES vets(id),
-    specie_id int REFERENCES species(id)
+    species_id int REFERENCES species(id)
 );
 
 CREATE TABLE visits (
     id serial primary key,
     animal_id int REFERENCES animals(id),
-    vet_id int REFERENCES vets(id),
+    vets_id int REFERENCES vets(id),
     date_of_visit date not null
 );
