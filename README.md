@@ -56,6 +56,9 @@ To get a local copy up and running, follow these steps.
 
 In order to run this project you need:
 
+- PostgreSQL database installed and configured on your system.
+- Create a PostgreSQL database for the project.
+
 ### Setup
 
 Clone this repository to your desired folder:
@@ -72,17 +75,18 @@ Then, you will change everything you want!
 
 Install this project with:
 
+- Install PostgreSQL using the installer available from the [official PostgreSQL download page](https://www.postgresql.org/download/).
+- Follow the installation instructions provided for your specific operating system.
+
 ### Usage
 
-To run the project, execute the following command:
+To run the project, execute the following steps:
 
-### Run tests
+- Open PGAdmin, if you haven't already.
+- Connect to your PostgreSQL database server by providing the necessary connection details.
+- In the PGAdmin interface, you can navigate and interact with your project's database using the SQL editor and other tools.
 
-To run tests, run the following command:
-
-### Deployment
-
-You can deploy this project using:
+Choose your preferred method (PostgreSQL SQL Shell or PGAdmin) to work with your project and perform database operations as needed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
