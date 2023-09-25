@@ -45,6 +45,7 @@
 
 - **See different animals with their own names, weight, etc..**
 - **Create, Read, Update, and Delete animals from the database.**
+- **Optimize Queries with Indexation**.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -58,6 +59,7 @@ In order to run this project you need:
 
 - PostgreSQL database installed and configured on your system.
 - Create a PostgreSQL database for the project.
+- Execute the SCHEMA.SQL, DATA.SQL, and QUERIES.SQL.
 
 ### Setup
 
@@ -96,6 +98,12 @@ Choose your preferred method (PostgreSQL SQL Shell or PGAdmin) to work with your
 
 - GitHub: [@rysthcraft](https://github.com/Rysth)
 - Linkedin: [@johnpalacios](https://www.linkedin.com/in/john-palacios-rysthcraft/)
+
+👤 **Soban Syeed**
+
+- GitHub: [@SnakyMz](https://github.com/SnakyMz)
+- Twitter: [@SobanSyeed](https://twitter.com/SobanSyeed)
+- LinkedIn: [Soban Syeed](https://www.linkedin.com/in/soban-syeed-82985b241/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

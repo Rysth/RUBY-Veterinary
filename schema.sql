@@ -33,7 +33,8 @@ ADD COLUMN species VARCHAR(100);
 CREATE TABLE owners (
     id serial primary key,
     full_name varchar(100) not null,
-    age integer not null
+    age integer not null,
+    email varchar(100)
 );
 
 CREATE TABLE species (
@@ -71,3 +72,16 @@ CREATE TABLE visits (
     vets_id int REFERENCES vets(id),
     date_of_visit date not null
 );
+
+/* Preparation - Week 2 */
+
+-- Add an email column to your owners table
+ALTER TABLE owners ADD COLUMN email VARCHAR(120);
+
+/* 
+    Optimized
+    - Created an INDEX for the animals ID help us to optimize A LOT the performance of the query.
+ */
+CREATE INDEX idx_animal_id ON visits (animal_id);
+CREATE INDEX idx_vets_id ON visits (vets_id);
+CREATE INDEX idx_email ON owners (email);

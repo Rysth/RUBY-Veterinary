@@ -269,3 +269,15 @@ WHERE vets.name = 'Maisy Smith'
 GROUP BY Specialty
 ORDER BY VisitCount DESC
 LIMIT 1;
+
+/* Project Requeriments - Week 2 */
+
+/* Querying before optimization */ 
+EXPLAIN ANALYZE SELECT COUNT(*) FROM visits where animal_id = 4;
+EXPLAIN ANALYZE SELECT * FROM visits where vet_id = 2;
+EXPLAIN ANALYZE SELECT * FROM owners where email = 'owner_18327@mail.com';
+
+/* Querying after optimization */
+EXPLAIN ANALYZE SELECT COUNT(*) FROM visits where animal_id = 4;
+EXPLAIN ANALYZE SELECT * FROM visits where vets_id = 2;
+EXPLAIN ANALYZE SELECT * FROM owners where email = 'owner_18327@mail.com';
