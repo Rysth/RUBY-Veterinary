@@ -286,3 +286,17 @@ INSERT INTO owners (full_name, age, email) SELECT 'Owner ' || generate_series(1,
 EXPLAIN ANALYZE SELECT COUNT(*) FROM visits where animal_id = 4;
 EXPLAIN ANALYZE SELECT * FROM visits where vet_id = 2;
 EXPLAIN ANALYZE SELECT * FROM owners where email = 'owner_18327@mail.com';
+
+/* 
+    Optimized
+    - Created an INDEX for the animals ID help us to optimize A LOT the performance of the query.
+    - Avoided the aggregate function COUNT(*) to reduce the amount of execution time. Because it's not needed now.
+ */
+CREATE INDEX idx_animal_id ON visits (animal_id);
+EXPLAIN ANALYZE SELECT * FROM visits where animal_id = 4;
+
+CREATE INDEX idx_vets_id ON visits (vets_id);
+EXPLAIN ANALYZE SELECT * FROM visits where vets_id = 2;
+
+CREATE INDEX idx_email ON owners (email);
+EXPLAIN ANALYZE SELECT * FROM owners where email = 'owner_18327@mail.com';
