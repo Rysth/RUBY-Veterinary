@@ -33,7 +33,8 @@ ADD COLUMN species VARCHAR(100);
 CREATE TABLE owners (
     id serial primary key,
     full_name varchar(100) not null,
-    age integer not null
+    age integer not null,
+    email varchar(100)
 );
 
 CREATE TABLE species (
