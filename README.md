@@ -28,6 +28,8 @@
 
 # 📖 RUBY Veterinary <a name="about-project"></a>
 
+![Database Schema](./schema/Veterinary_Clinic_Schema.png)
+
 **RUBY Veterinary** is a database scheme that we can follow to handle information from a Veterinary Clinic, here we can query information about different animals with their own properties. Built with PostgreSQL.
 
 ## 🛠 Built With <a name="built-with"></a>
